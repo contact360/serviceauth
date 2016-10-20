@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<div class="row">
+  <div class="col-md-4">
+    <c360-services-nav (serviceSelected)="serviceSelected($event)"></c360-services-nav>
+  </div>
+  <div class="col-md-8">
+    <c360-services-main [Selected]="selectedService"></c360-services-main>
+  </div>
+</div>
