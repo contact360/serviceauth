@@ -8,14 +8,16 @@ import { C360ServicesNavComponent } from './c360servicesnav.component';
 import { C360ServicesMainComponent } from './c360servicemain.component';
 import { C360AccountListComponent } from './c360accounts.component';
 import { C360AccountDetailComponent } from './c360accountdetail.component';
+import { AccountactionsComponent } from './accountactions/accountactions.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     C360ServicesNavComponent,
     C360ServicesMainComponent,
     C360AccountListComponent,
-    C360AccountDetailComponent
+    C360AccountDetailComponent,
+    AccountactionsComponent
   ],
   imports: [
     BrowserModule,
