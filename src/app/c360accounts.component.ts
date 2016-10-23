@@ -1,6 +1,6 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { CounciltaxService } from './services/counciltax.service';
 
 @Component({
   selector: 'c360-account-list',
@@ -32,14 +32,15 @@ export class C360AccountListComponent {
     rows: Object[];
     title: String;
 
-    constructor(){
-        this.columns = [{ heading: 'Account', property: 'account'},
+    constructor(private counciltaxService: CounciltaxService){
+        this.columns = [{ heading: 'Account', property: 'accountNumber'},
         { heading: 'Status', property:'status'},{ heading: 'Address', property:'address'},{ heading: 'Next Amount', property:'amount'},{ heading: 'Date', property:'date'}];
-        this.rows = [
+        this.rows = this.counciltaxService.getAccounts()
+         /*[
             { account: '232323', status:'Verified',address:'1 The Limes', amount:'£120.00',date:'02/11/2016' },
             { account: '109245', status:'Verified',address:'16 Corby Avenue', amount:'£137.20',date:'12/11/2016' },
             { account: '825102', status:'Verified',address:'48 Strawberry Fields ', amount:'£160.20',date:'05/11/2016' }
-            ]
+            ]*/
     }
 
     rowClicked(row){
