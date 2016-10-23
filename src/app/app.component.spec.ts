@@ -18,16 +18,16 @@ describe('App: NgTodo', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'Hello!'`, async(() => {
+  it(`should have as title 'My Services'`, async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Hello!');
+    expect(app.title).toEqual('My Services');
   }));
 
   it('should render title in a h1 tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Hello!');
+    expect(compiled.querySelector('h1').textContent).toContain('My Services');
   }));
 });
