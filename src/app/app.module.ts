@@ -10,6 +10,7 @@ import { C360AccountListComponent } from './c360accounts.component';
 import { C360AccountDetailComponent } from './c360accountdetail.component';
 import { AccountactionsComponent } from './accountactions/accountactions.component';
 import { CounciltaxService } from './services/counciltax.service';
+import { Config } from './config';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { CounciltaxService } from './services/counciltax.service';
     HttpModule,
     NgbModule.forRoot()
   ],
-  providers: [CounciltaxService],
+  providers: [CounciltaxService,Config],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
