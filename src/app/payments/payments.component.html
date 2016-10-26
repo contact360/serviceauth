@@ -1,0 +1,12 @@
+<div class="serviceauth-payments" >
+  <h4>{{title}}</h4>
+  <table class="table table-sm table-striped">
+      <tbody>
+          <tr *ngFor="let p of payments">
+          <td>{{p.date}}</td>
+          <td>{{p.amount}}</td>
+          <td>{{p.status}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

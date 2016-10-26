@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';
     <span></span>
     <div><h3>{{Selected.Name}}</h3></div>
     <div>
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover table-sm">
         <thead>
             <tr>
                 <th *ngFor="let column of columns">{{column.heading}}</th>
@@ -23,7 +23,7 @@ import { Observable } from 'rxjs/Rx';
         </table>
     </div>
   </div> `,
- 
+
   styles:[]
 })
 export class C360AccountListComponent {
@@ -36,7 +36,7 @@ export class C360AccountListComponent {
     constructor(private counciltaxService: CounciltaxService){
         this.columns = [{ heading: 'Account', property: 'accountNumber'},
         { heading: 'Status', property:'status'},{ heading: 'Address', property:'address'},{ heading: 'Next Amount', property:'amount'},{ heading: 'Date', property:'date'}];
-        
+
         this.rows = this.counciltaxService.getAccounts();
     }
 
