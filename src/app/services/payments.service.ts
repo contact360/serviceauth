@@ -17,6 +17,7 @@ export class PaymentsService {
   getPayments(account) : Observable<Payment[]>{
     return this.http.get('/mock-data/payments.json')
     .map((response:Response) => <Payment[]>response.json())
-    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error'))
+    ;
   }
 }
