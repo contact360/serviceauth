@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'c360-payments',
   templateUrl: './payments.component.html',
-  styleUrls: ['./payments.component.css']
+  styleUrls: ['./payments.component.css'],
+
 })
 export class PaymentsComponent implements OnInit {
     payments: any[];
@@ -21,5 +23,6 @@ export class PaymentsComponent implements OnInit {
      }
 
     ngOnInit() {
+        console.log('PaymentsComponent.ngOnInit');
     }
 }

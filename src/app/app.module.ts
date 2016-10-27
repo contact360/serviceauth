@@ -11,6 +11,7 @@ import { C360AccountDetailComponent } from './c360accountdetail.component';
 import { AccountactionsComponent } from './accountactions/accountactions.component';
 import { CounciltaxService } from './services/counciltax.service';
 import { PaymentsComponent } from './payments/payments.component';
+import { PaymentsService } from './services/payments.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { PaymentsComponent } from './payments/payments.component';
     HttpModule,
     NgbModule.forRoot()
   ],
-  providers: [CounciltaxService],
+  providers: [CounciltaxService,PaymentsService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

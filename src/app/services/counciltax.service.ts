@@ -10,18 +10,17 @@ export class Account {
     address: string;
     amount: number;
     date: string;
-} 
+}
 
 @Injectable()
 export class CounciltaxService {
 
-
-  constructor(private http: Http) { 
+  constructor(private http: Http) {
 
   }
 
   getAccounts() : Observable<Account[]> {
-    return this.http.get('/api/accounts.json')
+    return this.http.get('/mock-data/accounts.json')
       .map((response:Response) => <Account[]>response.json());
   }
 }
