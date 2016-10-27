@@ -10,11 +10,7 @@ import { C360AccountListComponent } from './c360accounts.component';
 import { C360AccountDetailComponent } from './c360accountdetail.component';
 import { AccountactionsComponent } from './accountactions/accountactions.component';
 import { CounciltaxService } from './services/counciltax.service';
-<<<<<<< HEAD
-
-=======
 import { PaymentsComponent } from './payments/payments.component';
->>>>>>> 1e55159bf97f9f8189d19826de2c3fe589106748
 
 @NgModule({
   declarations: [
