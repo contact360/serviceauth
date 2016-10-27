@@ -13,3 +13,15 @@ h3 {
 .account-action:hover {
     background-color: cadetblue;
 }
+
+.c360-account-actions {
+ display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+div[class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
